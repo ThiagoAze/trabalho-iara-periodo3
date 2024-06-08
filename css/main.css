@@ -1,0 +1,185 @@
+/* Site de Login e Cadastro*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #023047
+}
+
+.conteudo-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+}
+.conteudo-main#cadastro {
+    height: auto;
+}
+/*Quadrado de Login*/
+.formLogin, .formCadastro {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 7px;
+    padding: 40px;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
+    gap: 5px
+}
+
+.areaLogin img {
+    width: 420px;
+}
+
+/*Icone*/ 
+.formLogin i, .formCadastro i{
+    border-radius: 97%;
+    color: white;
+    background-color: black;
+    margin-left: 15vh;
+    margin-right: 15vh;
+    padding: 13px;
+    font-size: 5vh;
+    text-align: center;
+   
+}
+
+.formCadastro i {
+    margin-left: 20vh;
+    margin-right: 20vh;
+}
+
+.formLogin h1, .formCadastro h1 {
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+    font-size: 2.3em;
+}
+
+.formLogin p, .formCadastro p {
+    display: inline-block;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.formLogin input, .formCadastro input {
+    padding: 15px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    border-radius: 4px;
+    transition: all linear 160ms;
+    outline: none;
+}
+
+
+.formLogin input:focus, .formCadastro input:focus {
+    border: 1px solid blue;
+}
+
+.formLogin label, .formCadastro label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.formLogin a, .formCadastro a {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 13px;
+    color: blue;
+    text-align: center;
+    transition: all linear 160ms;
+}
+
+.formLogin a:hover, .formCadastro a:hover {
+    color: black;
+}
+
+.requisito-senha {
+    margin-top: -17px;
+    margin-bottom: -17px;
+}
+
+/*Style scipt cadastro*/
+.permissao-cadastro-sucesso, .permissao-cadastro-erro {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 7px;
+    color: #fff;
+    z-index: 999;
+    visibility: hidden;
+    padding-left: 3vh;
+    padding-right: 3vh;
+}
+
+.permissao-cadastro-sucesso h5, .permissao-cadastro-erro h5{
+    font-size: 17px;
+    text-align-last: center;
+    margin-top: 2px;
+}
+
+.permissao-cadastro-sucesso p, .permissao-cadastro-erro p{
+    font-size: 15px;
+    text-align-last: center;
+    margin-top: 2px;
+}
+
+.permissao-cadastro-sucesso {
+    background-color: #0e6929;
+}
+
+.permissao-cadastro-erro {
+
+    background-color: rgb(189, 24, 24)
+}
+
+.permissao-cadastro-sucesso.active, .permissao-cadastro-erro.active {
+    visibility:visible;
+}
+
+/*Botão*/
+.btn {
+    background-color: black;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    border: none !important;
+    transition: all linear 160ms;
+    cursor: pointer;
+    margin: 0 !important;
+
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background-color: black;
+
+}
+
+/* Responsividade do script de cadastro */
+@media screen and (min-width: 1104px) and (max-width: 1323px) {
+    .permissao-cadastro-erro, .permissao-cadastro-sucesso {
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1103px) {
+    .permissao-cadastro-erro, .permissao-cadastro-sucesso {
+        width: 42%;
+    }
+}
+
+@media screen and (max-width: 799px) {
+    .permissao-cadastro-erro, .permissao-cadastro-sucesso {
+        width: 100%;
+    }
+}

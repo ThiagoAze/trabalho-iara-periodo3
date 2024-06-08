@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/b82f5ae24a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="conteudo-main" id="cadastro">
+
+        <div class="permissao-cadastro-sucesso" onclick='window.location.href="login.html"'>
+            <h5>Usuário cadastrado com sucesso!</h5>
+            <p>Clique aqui para voltar para a página de login</p>
+        </div>
+        <div class="permissao-cadastro-erro">
+            <h5>Algo deu errado!</h5>
+            <p>Tente novamente e confira se as informações estão corretas</p>
+        </div>
+
+        <form method="POST" action="login.html"  class="formCadastro">
+            <i class="fa-solid fa-user"></i>
+            <h1>Cadastro</h1>
+            <p>Digite os seus dados no campo abaixo para criar a sua conta.</p>
+            <label for="nome">Nome Completo</label>
+            <input type="text" placeholder="Digite seu nome completo" autofocus="true" required />
+            <label for="email">E-mail</label>
+            <input type="email" placeholder="Digite seu e-mail" autofocus="true" required />
+            <label for="usuario">Nome Completo</label>
+            <input type="text" placeholder="Digite seu nome de usuário" autofocus="true" required />
+            <label for="password">Senha</label>
+            <input type="password" placeholder="Digite sua senha" required/>
+
+            <div class="requisitos-senha">
+                <h2>A sua senha deve conter</h2>
+                <div class="requisito-senha">
+                    <input type="checkbox" name="requisitoCaracteres" id="requisitoCaracteres" disabled required>
+                    <p>Pelo menos 8 caracteres</p>
+                </div>
+
+                <div class="requisito-senha">
+                    <input type="checkbox" name="requisitoMaiuscula" id="requisitoMaiuscula" disabled required>
+                    <p>Pelo menos uma letra maiúscula</p> 
+                </div>
+                
+                <div class="requisito-senha">
+                    <input type="checkbox" name="requisitoNumero" id="requisitoNumero" disabled required>
+                <p>Pelo menos um número</p>
+                </div>
+
+                <div class="requisito-senha">
+                    <input type="checkbox" name="requisitoEspecial" id="requisitoEspecial" disabled required>
+                    <p>Pelo menos um caractere especial</p>
+                </div>
+            </div>
+
+            <label for="password">Confirmação de Senha</label>
+            <input type="password" placeholder="Digite sua senha novamente" required/>
+
+            <input type="submit" value="Cadastre-se" class="btn" />
+        </form>
+        <div class="script-teste">
+            <p>Isso é Apenas para fins de teste e visualização de cenários</p>
+                <br>
+                <div class="ativa-sucesso" onclick="sucessoAtiva()" style="text-decoration: underline;">
+                    Clique para Sucesso
+                </div>
+                <br>
+                <div class="ativa-erro" onclick="erroAtiva()" style="text-decoration: underline;">
+                    Clique para erro
+                </div>
+        </div>
+    </div>
+
+    <script>
+        function sucessoAtiva(){
+            const mensagemSucesso = document.querySelector(".permissao-cadastro-sucesso");
+            const mensagemErro = document.querySelector(".permissao-cadastro-erro");
+
+            mensagemSucesso.classList.toggle("active");
+            mensagemErro.classList.remove("active");
+        }
+        function erroAtiva(){
+            const mensagemErro = document.querySelector(".permissao-cadastro-erro");
+            const mensagemSucesso = document.querySelector(".permissao-cadastro-sucesso");
+
+            mensagemErro.classList.toggle("active");
+            mensagemSucesso.classList.remove("active");
+        }
+        function sucessoDesativa(){
+            const mensagemSucesso = document.querySelector(".permissao-cadastro-sucesso");
+
+            mensagemSucesso.classList.remove("active");
+        }
+        function erroDesativa(){
+            const mensagemErro = document.querySelector(".permissao-cadastro-erro");
+
+            mensagemErro.classList.remove("active");
+        }
+    </script>
+    
+</body>
+</html>
