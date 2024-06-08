@@ -11,8 +11,18 @@ body{
     height: 30px;
     border-left: 2px solid;
 }
-a, h2, p{
-    font-family: Arial;
+
+.requisitos-senha h2{
+    display: inline-block;
+    font-size: 14px;
+    color: black;
+    margin-bottom: 2px;
+}
+a, p{
+    display: inline-block;
+    font-size: 14px;
+    color: white;
+    margin-bottom: 2px;
 }
 a{
     text-decoration: underline;
@@ -585,7 +595,8 @@ footer{
 }
 
 .permissao-cadastro-erro {
-    background-color: #690e0e;
+
+    background-color: rgb(189, 24, 24)
 }
 
 .permissao-cadastro-sucesso.active {
@@ -617,12 +628,18 @@ conjunto-form {
 
 form input {
     font-size: 0.9rem;
-    border: solid;
-    padding: 4px;
+    border: 1px solid #ccc;
+    padding: 14px;
     margin: 1vh;
     width: 70vh;
     max-width: 53vh;
     text-align-last: left;
+    transition: all linear 160ms;
+    outline: none;
+    border-radius: 4px;
+}
+form input:focus {
+     border: 1px solid blue;
 }
 
 form .termo {
@@ -637,8 +654,14 @@ form .requisitos-senha {
 }
 
 form .termo a {
-    color: rgb(0, 89, 255);
-    text-decoration: underline;
+
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 13px;
+    color: blue;
+    text-align: center;
+    transition: all linear 160ms;
+
 }
 
 form .termo input, form .requisitos-senha input {
@@ -653,6 +676,9 @@ form button {
     background-color: black;
     color: white;
     padding: 10px;
+    width: 100%;
+    border-radius: 4px;
+
 }
 
 /* Responsividade de cadastro */

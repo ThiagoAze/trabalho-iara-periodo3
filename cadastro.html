@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/b82f5ae24a.js" crossorigin="anonymous"></script>
+    <title>Terra News</title>
+</head>
+<body>
+    <main id="cadastro">
+            <!-- Informações da página -->
+            <div class="conteudo-main">
+                <i class="fa-solid fa-user"></i>
+                <h1>Cadastre-se</h1>
+
+                <div class="permissao-cadastro-sucesso" onclick='window.location.href="login.html"'>
+                    <h5>Usuário cadastrado com sucesso!</h5>
+                    <p>Clique aqui para voltar para a página de login</p>
+                </div>
+                <div class="permissao-cadastro-erro">
+                    <h5>Algo deu errado!</h5>
+                    <p>Tente novamente e confira se as informações estão corretas</p>
+                </div>
+            </div>
+            <!-- Formulário de cadastro deve se fazer algumas verificações -->
+            <div class="conteudo-main">
+                <!-- Envia temporariamente para a mesma página, deve se enviar para uma página de validações -->
+                <form action="#" method="post">
+                    <!-- Deve ser fornecido -->
+                    <div class="conjunto-form">
+                        <input type="text" id="nome" name="nome" placeholder="Nome completo" required>
+                    </div>
+                    <br>
+                    <!-- Deve ser um e-mail existente -->
+                    <div class="conjunto-form">
+                        <input type="email" id="email" name="email" placeholder="E-mail" required>
+                    </div>
+                    <br>
+                    <!-- Não pode já estar cadastrado -->
+                    <div class="conjunto-form">
+                        <input type="text" id="usuario" name="usuario" placeholder="Nome do usuário" required>
+                    </div>
+                    <br>
+                    <!-- Deve conter 8 caracteres tendo no mínimo 3 números e 1 caractere especial  -->
+                    <div class="conjunto-form">
+                        <div class="senha">
+                            <input type="password" id="senha" name="senha" placeholder="Senha" required>
+                            <br>
+                            <!-- Assim que um requisito for cumprido deve-se marcar o respectivo campo -->
+                            <div class="requisitos-senha">
+                                <h2>A sua senha deve conter</h2>
+                                <div class="requisito-senha">
+                                    <input type="checkbox" name="requisitoCaracteres" id="requisitoCaracteres" disabled required>
+                                    <p>Pelo menos 8 caracteres</p>
+                                </div>
+
+                                <div class="requisito-senha">
+                                    <input type="checkbox" name="requisitoMaiuscula" id="requisitoMaiuscula" disabled required>
+                                    <p>Pelo menos uma letra maiúscula</p> 
+                                </div>
+                                
+                                <div class="requisito-senha">
+                                    <input type="checkbox" name="requisitoNumero" id="requisitoNumero" disabled required>
+                                <p>Pelo menos um número</p>
+                                </div>
+
+                                <div class="requisito-senha">
+                                    <input type="checkbox" name="requisitoEspecial" id="requisitoEspecial" disabled required>
+                                    <p>Pelo menos um caractere especial</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <!-- Deve ser o mesmo que a senha acima -->
+                    <div class="conjunto-form">
+                        <div class="senha">
+                            <input type="password" id="senhaConfirma" name="senhaConfirma" placeholder="Repita a sua senha" required>
+                        </div>
+                    </div>
+                    <br>
+                    <!-- Devem ser aceito -->
+                    <div class="termo">
+                        <input type="checkbox" name="termo" id="termo" required>
+                        <p>Li e concordo com os <a href="">Termos de Uso</a> e <a href="">Política de Privacidade</a>.</p>
+                    </div>
+                    <br>
+                    <button type="submit">Cadastrar-se</button>
+                </form>
+                <br>
+                <!-- Para Teste de permissao simulada -->
+                <p>Isso é Apenas para fins de teste e visualização de cenários</p>
+                <br>
+                <div class="ativa-sucesso" onclick="sucessoAtiva()" style="text-decoration: underline;">
+                    Clique para Sucesso
+                </div>
+                <br>
+                <div class="ativa-erro" onclick="erroAtiva()" style="text-decoration: underline;">
+                    Clique para erro
+                </div>
+            </div>
+    </main>
+
+    <script>
+        function sucessoAtiva(){
+            const mensagemSucesso = document.querySelector(".permissao-cadastro-sucesso");
+            const mensagemErro = document.querySelector(".permissao-cadastro-erro");
+
+            mensagemSucesso.classList.toggle("active");
+            mensagemErro.classList.remove("active");
+        }
+        function erroAtiva(){
+            const mensagemErro = document.querySelector(".permissao-cadastro-erro");
+            const mensagemSucesso = document.querySelector(".permissao-cadastro-sucesso");
+
+            mensagemErro.classList.toggle("active");
+            mensagemSucesso.classList.remove("active");
+        }
+        function sucessoDesativa(){
+            const mensagemSucesso = document.querySelector(".permissao-cadastro-sucesso");
+
+            mensagemSucesso.classList.remove("active");
+        }
+        function erroDesativa(){
+            const mensagemErro = document.querySelector(".permissao-cadastro-erro");
+
+            mensagemErro.classList.remove("active");
+        }
+    </script>
+
+</body>
+</html>
