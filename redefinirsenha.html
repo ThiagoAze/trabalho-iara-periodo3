@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE-edge">
+<meta name="viewport" content="width=devide-width, initial-scale=1.0">
+<title> Redefinir senha </title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="main.css">
+<script src="https://kit.fontawesome.com/b82f5ae24a.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class = "conteudo-main">
+        <form method="POST" action="login.html" class="formLogin">
+            <i class="fa-solid fa-lock"></i>
+            <h1>Esqueceu a Senha?</h1>
+            <p>Informe seu E-mail ou nome de utilizador para recuperar o acesso a conta</p>
+            <input type="email" placeholder="E-mail" autofocus="true">
+            <button type="submit" onclick="redefinirAtivo()" class="btn">Redefinir Senha</button>
+            <a href="/">Precisa de Ajuda?</a>
+        </form>
+        <div class="permissao-redefinir-senha">
+            <h5>Senha redefinida com sucesso!!</h5>
+        </div>
+        
+    </div>
+</html>
