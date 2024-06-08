@@ -8,7 +8,6 @@ body {
     padding: 0;
     color: #023047
 }
-
 .conteudo-main {
     display: flex;
     flex-direction: column;
@@ -22,54 +21,76 @@ body {
 .conteudo-main#cadastro {
     height: auto;
 }
+
 /*Quadrado de Login*/
-.formLogin, .formCadastro {
+.formLogin, .formCadastro, .formRedsenha{
     display: flex;
     flex-direction: column;
     background-color: #fff;
     border-radius: 7px;
     padding: 40px;
     box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
-    gap: 5px
+    gap: 5px;
+    text-align: center;
 }
-
 .areaLogin img {
     width: 420px;
 }
 
 /*Icone*/ 
-.formLogin i, .formCadastro i{
+.formLogin i, .formCadastro i {
     border-radius: 97%;
     color: white;
     background-color: black;
-    margin-left: 15vh;
-    margin-right: 15vh;
-    padding: 13px;
+    margin: auto;
+    padding: 20px;
     font-size: 5vh;
     text-align: center;
-   
 }
-
+.formRedsenha{
+    padding: 5vh;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: all linear 160ms;
+    outline: none;
+    text-align: center;
+    height: 60vh;
+}
+.formRedsenha i{
+    border-radius: 97%;
+    color: white;
+    background-color: black;
+    padding: 20px;
+    font-size: 5vh;
+    margin:  auto;
+}
+.InputRedSenha{
+    font-size: 0.9rem;
+    border: 1px solid #ccc;
+    padding: 14px;
+    margin: 0 auto 3vh auto;
+    width: 100%;
+    text-align-last: left;
+    transition: all linear 160ms;
+    border-radius: 4px;
+}
 .formCadastro i {
     margin-left: 20vh;
     margin-right: 20vh;
 }
-
-.formLogin h1, .formCadastro h1 {
+.formLogin h1, .formCadastro h1, .formRedsenha h1 {
     padding: 0;
     margin: 0;
     font-weight: 500;
     font-size: 2.3em;
 }
-
-.formLogin p, .formCadastro p {
+.formLogin p, .formCadastro p, .formRedsenha p{
     display: inline-block;
     font-size: 14px;
     color: #666;
     margin-bottom: 25px;
 }
-
-.formLogin input, .formCadastro input {
+.formLogin input, .formCadastro input .formRedsenha input {
     padding: 15px;
     font-size: 14px;
     border: 1px solid #ccc;
@@ -79,18 +100,16 @@ body {
     transition: all linear 160ms;
     outline: none;
 }
-
-
-.formLogin input:focus, .formCadastro input:focus {
+.formLogin input:focus, .formCadastro input:focus .formRedsenha input:focus {
     border: 1px solid blue;
 }
 
-.formLogin label, .formCadastro label {
+.formLogin label, .formCadastro label, .formRedsenha label {
     font-size: 14px;
     font-weight: 600;
 }
 
-.formLogin a, .formCadastro a {
+.formLogin a, .formCadastro a, .formRedsenha a {
     display: inline-block;
     margin-bottom: 20px;
     font-size: 13px;
@@ -99,7 +118,7 @@ body {
     transition: all linear 160ms;
 }
 
-.formLogin a:hover, .formCadastro a:hover {
+.formLogin a:hover, .formCadastro a:hover, .formRedsenha a:hover {
     color: black;
 }
 
@@ -120,28 +139,22 @@ body {
     padding-left: 3vh;
     padding-right: 3vh;
 }
-
 .permissao-cadastro-sucesso h5, .permissao-cadastro-erro h5{
     font-size: 17px;
     text-align-last: center;
     margin-top: 2px;
 }
-
 .permissao-cadastro-sucesso p, .permissao-cadastro-erro p{
     font-size: 15px;
     text-align-last: center;
     margin-top: 2px;
 }
-
 .permissao-cadastro-sucesso {
     background-color: #0e6929;
 }
-
 .permissao-cadastro-erro {
-
     background-color: rgb(189, 24, 24)
 }
-
 .permissao-cadastro-sucesso.active, .permissao-cadastro-erro.active {
     visibility:visible;
 }
@@ -156,7 +169,6 @@ body {
     transition: all linear 160ms;
     cursor: pointer;
     margin: 0 !important;
-
 }
 
 .btn:hover {
@@ -183,3 +195,4 @@ body {
         width: 100%;
     }
 }
+

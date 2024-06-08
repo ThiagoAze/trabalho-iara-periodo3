@@ -23,9 +23,7 @@ a, p{
     font-size: 14px;
     color: #ccc;
     margin-bottom: 2px;
-    
 }
-
 a{
     text-decoration: underline;
     font-weight: bolder;
@@ -34,7 +32,6 @@ a{
 a:hover{
     color: grey;
 }
-
 
 /* Parte do Header */
 header{
@@ -564,7 +561,6 @@ footer{
     margin: 2vh;
     margin-left: 51vh;
     margin-right: 51vh;
-
     display: flex;
     flex-direction: column;
     background-color: #fff;
@@ -573,7 +569,6 @@ footer{
     box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
     gap: 5px
 }
-
 .requisitos-senha {
     font-size: 18px;
     text-align-last: left;
@@ -581,15 +576,12 @@ footer{
     align-items: flex-start;
     margin-left: 25%;
 }
-
 .requisitos-senha ul {
     margin-left: 21vh;
 }
-
 .requisitos-senha li {
     padding: 5px;
 }
-
 .requisito-senha {
     display: flex;
     align-items: center;
@@ -597,7 +589,6 @@ footer{
     margin-top: -10px;
     margin-bottom: -10px;
 }
-
 .permissao-cadastro-sucesso, .permissao-cadastro-erro {
     position: fixed;
     top: 0;
@@ -607,32 +598,25 @@ footer{
     z-index: 999;
     visibility: hidden;
 }
-
 .permissao-cadastro-sucesso h5, .permissao-cadastro-erro h5{
     font-size: 17px;
 }
-
 .permissao-cadastro-sucesso p, .permissao-cadastro-erro p{
     font-size: 15px;
 }
-
 .permissao-cadastro-sucesso {
     background-color: #0e6929;
 }
-
 .permissao-cadastro-erro {
 
     background-color: rgb(189, 24, 24)
 }
-
 .permissao-cadastro-sucesso.active {
     visibility:visible;
 }
-
 .permissao-cadastro-erro.active{
     visibility:visible;
 }
-
 .conteudo-main i {
     border-radius: 97%;
     color: white;
@@ -641,17 +625,14 @@ footer{
     padding: 13px;
     font-size: 5vh;
 }
-
 .conteudo-main h1 {
     font-size: 1.6rem;
 }
-
 conjunto-form {
     margin-left: 30%;
     margin-right: 30%;
     text-align-last: start;
 }
-
 form input {
     font-size: 0.9rem;
     border: 1px solid #ccc;
@@ -667,7 +648,6 @@ form input {
 form input:focus {
      border: 1px solid blue;
 }
-
 form .termo {
     display: flex;
     justify-content: center;
@@ -678,24 +658,19 @@ form .requisitos-senha {
     justify-content: flex-end;
     flex-direction: column;
 }
-
 form .termo a {
-
     display: inline-block;
     margin-bottom: 20px;
     font-size: 13px;
     color: blue;
     text-align: center;
     transition: all linear 160ms;
-
 }
-
 form .termo input, form .requisitos-senha input {
     padding: 0px;
     margin: 0px;
     width: 3vh;
 }
-
 form button {
     font-size: 17px;
     margin: 14px;
@@ -704,7 +679,6 @@ form button {
     padding: 10px;
     width: 100%;
     border-radius: 4px;
-
 }
 
 /* Responsividade de cadastro */
