@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terra News</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/b82f5ae24a.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <header>
+        <div id="header-top">
+            <!-- Abre um menu lateral -->
+            <div class="conjunto-menu">
+                <div class="conteudo-header">
+                    <div id="burger">
+                        <a href="#"><i class="fa-solid fa-bars" onclick="menuBurgerAtivar()"></i><p>Menu</p></a>
+                    </div>
+                    <!--Inutiliza o fundo do site sem ser o menu-->
+                    <div class="overlay" onclick="menuBurgerDesativar()"></div>
+                    <!-- Parte de cima do menu-->
+                    <div class="menu-lateral">
+                        <div class="fechar">
+                            <a href="#"><i class="fa-solid fa-x" onclick="menuBurgerDesativar()"></i></a>
+                            <!-- Informações do perfíl da pessoa -->
+                            <!-- Leva para o perfíl da pessoa -->
+                            <div id="perfil-menu">
+                                <button style="background-color: white;">
+                                    <div class="perfil-img">
+                                        <a href="#"> <i class="fa-solid fa-user"></i></a>
+                                    </div>
+                                    <div class="perfil-texto">
+                                        <h4>Nome</h4>
+                                        <h5>Sobrenome</h5>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Informações de acessibilidade -->
+                        <div class="acessibilidade">
+                            <h1>Acessibilidade</h1>
+                            <ul>
+                                <!-- Faz o site ficar com tema escuro -->
+                                <a href="#">
+                                <li onclick="modoEscuro()">
+                                    <i class="fa-solid fa-circle-half-stroke"></i>
+                                    <h2>Modo Escuro</h2>
+                                </li>
+                                </a>
+                                <a href="#">
+                                <!-- Possibilita a mudança de tamanho do texto da imagem -->
+                                <li onclick="tamanhoFonte()">
+                                    <i class="fa-solid fa-text-width"></i>
+                                    <h2>Tamanho da Fonte</h2>
+                                </li>
+                                </a>
+                              </ul>
+                        </div>
+                        <br>
+
+                        <br>
+                        <!-- Informações de navegação com link (páginas do site) -->
+                        <div class="topico">
+                            <h1>Fique por dentro</h1>
+
+                            <ul>
+                                <a href="#">
+                                    <li>
+                                        <h2>Item 1</h2>
+                                        <i class="fa-solid fa-angle-right"></i>
+                                    </li>
+                                </a>
+                                <a href="#">
+                                    <li>
+                                        <h2>Item 2</h2>
+                                        <i class="fa-solid fa-angle-right"></i>
+                                    </li>
+                                </a>
+                                <a href="#">
+                                    <li>
+                                        <h2>Item 3</h2>
+                                        <i class="fa-solid fa-angle-right"></i>
+                                    </li>
+                                </a>
+                                <a href="#">
+                                    <li>
+                                        <h2>Item 4</h2>
+                                        <i class="fa-solid fa-angle-right"></i>
+                                    </li>
+                                </a>
+                                
+                              </ul>
+                        </div>
+                        <br>
+
+                        <br>
+                        <!-- Informações de termos -->
+                        <div class="opcao">
+                            <ul>
+                                <a href="#">
+                                    <li onclick="">
+                                        <i class="fa-solid fa-file-lines"></i>
+                                        <h2>Termos de uso</h2>
+                                    </li>
+                                </a>
+                                <a href="#">
+                                    <li onclick="">
+                                        <i class="fa-solid fa-user-shield"></i>
+                                        <h2>Termos de privacidade</h2>
+                                    </li>
+                                </a>
+                              </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Leva para a página principal -->
+            
+                <div id="logo-header">
+                    <a href="#"> <img src="https://cdn-icons-png.freepik.com/512/7005/7005152.png" alt="logo"> </a>
+                </div>
+
+                <!-- Permite pesquisa no site -->
+            
+                <div id="pesquisa">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="txtBusca" placeholder="Buscar..."/>
+                </div>
+            
+            <!-- Leva a página do perfil -->
+            
+            <div id="perfil">
+                <a href="#"><i class="fa-solid fa-user"></i><p>Perfil</p></a>
+            </div>
+            
+        </div>
+        <br>
+        <!-- Itens de menu secundario (migalhas de pão e menu de noticias) -->
+        <div id="header-down">
+            <div class="conteudo-header-nav">
+                <div id="navegacao-horizontal">
+                    <!-- Leva para a página anterior -->
+                    <div class="breadcrumb">
+                        <a href="">link</a>
+                        >
+                        <a href="">link</a>
+                    </div>
+                    <div class="menu-horizontal">
+                    <!-- Menu de tópicos mais acessados -->
+                        <ul>
+                            <li><a href="">Ultimas notícias</a></li>
+                            <li><a href="">Tema 1</a></li>
+                            <li><a href="">Tema 2</a></li>
+                            <li><a href="">Tema 3</a></li>
+                            <li><a class="tema4" href="">Tema 4</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Conteúdo -->
+    <main>
+        <section>
+            <!-- Leva para a notícia selecionada -->
+            <div class="noticia">
+                <img src="https://static.todamateria.com.br/upload/ge/ne/genero-textual-noticia-og.jpg" alt="item 1">
+                <div class="titulo">
+                    <h2>Título da noticia</h2>
+                </div>
+                <div class="subtitulo">
+                    <p>Subtitulo da notícia</p>
+                </div>
+            </div>
+
+            <div class="noticia">
+                <img src="https://static.todamateria.com.br/upload/ge/ne/genero-textual-noticia-og.jpg" alt="item 2">
+                <div class="titulo">
+                    <h2>Título da noticia</h2>
+                </div>
+                <div class="subtitulo">
+                    <p>Subtitulo da notícia</p>
+                </div>
+            </div>
+
+            <div class="noticia">
+                <img src="https://static.todamateria.com.br/upload/ge/ne/genero-textual-noticia-og.jpg" alt="item 3">
+                <div class="titulo">
+                    <h2>Título da noticia</h2>
+                </div>
+                <div class="subtitulo">
+                    <p>Subtitulo da notícia</p>
+                </div>
+            </div>
+
+            <div class="noticia">
+                <img src="https://static.todamateria.com.br/upload/ge/ne/genero-textual-noticia-og.jpg" alt="item 4">
+                <div class="titulo">
+                    <h2>Título da noticia</h2>
+                </div>
+                <div class="subtitulo">
+                    <p>Subtitulo da notícia</p>
+                </div>
+            </div>
+
+            <div class="noticia">
+                <img src="https://static.todamateria.com.br/upload/ge/ne/genero-textual-noticia-og.jpg" alt="item 5">
+                <div class="titulo">
+                    <h2>Título da noticia</h2>
+                </div>
+                <div class="subtitulo">
+                    <p>Subtitulo da notícia</p>
+                </div>
+            </div>
+
+            <div class="noticia">
+                <img src="https://static.todamateria.com.br/upload/ge/ne/genero-textual-noticia-og.jpg" alt="item 6">
+                <div class="titulo">
+                    <h2>Título da noticia</h2>
+                </div>
+                <div class="subtitulo">
+                    <p>Subtitulo da notícia</p>
+                </div>
+            </div>
+                 
+            <div class="noticia">
+                <img src="https://static.todamateria.com.br/upload/ge/ne/genero-textual-noticia-og.jpg" alt="item 7">
+                <div class="titulo">
+                    <h2>Título da noticia</h2>
+                </div>
+                <div class="subtitulo">
+                    <p>Subtitulo da notícia</p>
+                </div>
+            </div>
+
+            <div class="noticia">
+                <img src="https://static.todamateria.com.br/upload/ge/ne/genero-textual-noticia-og.jpg" alt="item 8">
+                <div class="titulo">
+                    <h2>Título da noticia</h2>
+                </div>
+                <div class="subtitulo">
+                    <p>Subtitulo da notícia</p>
+                </div>
+            </div>
+
+            <div class="noticia">
+                <div class="propaganda">
+                    <img src="https://ecommercenapratica.com/wp-content/uploads/2022/02/propaganda-de-produtos-1.png" alt="propaganda">
+                    Propaganda
+                </div>
+            </div>
+        </section>
+
+        <hr>
+    </main>
+    <footer>
+        <section>
+            <div id="footer">
+                <!-- Leva para as redes sociais -->
+                <div class="conteudo-footer">
+                    <ul class="social">
+                        <h3>Nos siga nas redes sociais:</h3>
+                        <li>
+                            <a href="https://pt-br.facebook.com/" target="_blank">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.instagram.com/" target="_blank">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.whatsapp.com/?lang=pt_br" target="_blank">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="conteudo-footer">
+                    <!-- Leva para páginas com tópicos especificos -->
+                    <div class="topicos">
+                        <h3>Tópicos</h3>
+                        <ul>
+                            <li>algo</li>
+                            <li>algo</li>
+                            <li>algo</li>
+                        </ul>
+                        <ul>
+                            <li>algo</li>
+                            <li>algo</li>
+                            <li>algo</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Leva para outras páginas -->
+                <div class="conteudo-footer">
+                    <div class="menu">
+                        <h3>Menu</h3>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Sobre</a></li>
+                            <li><a href="#">Contato</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Leva para a página principal -->
+                <div class="logo"><img src="https://cdn-icons-png.freepik.com/512/7005/7005152.png" alt="logo da Terra News"></div>
+            </div>
+        </section>
+    </footer>
+
+    <script>
+        function menuBurgerAtivar() {
+            const menuLateral = document.querySelector(".menu-lateral");
+            const overlay = document.querySelector(".overlay");
+
+            menuLateral.classList.toggle("active");
+            overlay.classList.toggle("active");
+
+        }
+        function menuBurgerDesativar() {
+            const menuLateral = document.querySelector(".menu-lateral");
+            const overlay = document.querySelector(".overlay");
+
+            menuLateral.classList.remove("active");
+            overlay.classList.remove("active");
+        }
+    </script>
+
+</body>
+</html>
