@@ -21,9 +21,11 @@ body{
 a, p{
     display: inline-block;
     font-size: 14px;
-    color: white;
+    color: #ccc;
     margin-bottom: 2px;
+    
 }
+
 a{
     text-decoration: underline;
     font-weight: bolder;
@@ -66,8 +68,9 @@ header{
     padding-left: 6px;
     text-decoration: none;
 }
-#burger p{
+#burger a p, #perfil a p{
     text-decoration: underline;
+    color: #000;
 }
 #burger i {
     padding-right: 10px;
