@@ -1,4 +1,4 @@
-/* Site de Login */
+/* Site de Login e Cadastro*/
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
@@ -19,8 +19,11 @@ body {
     height: 100vh;
     background-color: white;
 }
+.conteudo-main#cadastro {
+    height: auto;
+}
 /*Quadrado de Login*/
-.formLogin {
+.formLogin, .formCadastro {
     display: flex;
     flex-direction: column;
     background-color: #fff;
@@ -35,7 +38,7 @@ body {
 }
 
 /*Icone*/ 
-.formLogin i {
+.formLogin i, .formCadastro i{
     border-radius: 97%;
     color: white;
     background-color: black;
@@ -47,21 +50,26 @@ body {
    
 }
 
-.formLogin h1 {
+.formCadastro i {
+    margin-left: 20vh;
+    margin-right: 20vh;
+}
+
+.formLogin h1, .formCadastro h1 {
     padding: 0;
     margin: 0;
     font-weight: 500;
     font-size: 2.3em;
 }
 
-.formLogin p {
+.formLogin p, .formCadastro p {
     display: inline-block;
     font-size: 14px;
     color: #666;
     margin-bottom: 25px;
 }
 
-.formLogin input {
+.formLogin input, .formCadastro input {
     padding: 15px;
     font-size: 14px;
     border: 1px solid #ccc;
@@ -73,16 +81,16 @@ body {
 }
 
 
-.formLogin input:focus {
+.formLogin input:focus, .formCadastro input:focus {
     border: 1px solid blue;
 }
 
-.formLogin label {
+.formLogin label, .formCadastro label {
     font-size: 14px;
     font-weight: 600;
 }
 
-.formLogin a {
+.formLogin a, .formCadastro a {
     display: inline-block;
     margin-bottom: 20px;
     font-size: 13px;
@@ -91,8 +99,51 @@ body {
     transition: all linear 160ms;
 }
 
-.formLogin a:hover {
+.formLogin a:hover, .formCadastro a:hover {
     color: black;
+}
+
+.requisito-senha {
+    margin-top: -17px;
+    margin-bottom: -17px;
+}
+
+/*Style scipt cadastro*/
+.permissao-cadastro-sucesso, .permissao-cadastro-erro {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 7px;
+    color: #fff;
+    z-index: 999;
+    visibility: hidden;
+    padding-left: 3vh;
+    padding-right: 3vh;
+}
+
+.permissao-cadastro-sucesso h5, .permissao-cadastro-erro h5{
+    font-size: 17px;
+    text-align-last: center;
+    margin-top: 2px;
+}
+
+.permissao-cadastro-sucesso p, .permissao-cadastro-erro p{
+    font-size: 15px;
+    text-align-last: center;
+    margin-top: 2px;
+}
+
+.permissao-cadastro-sucesso {
+    background-color: #0e6929;
+}
+
+.permissao-cadastro-erro {
+
+    background-color: rgb(189, 24, 24)
+}
+
+.permissao-cadastro-sucesso.active, .permissao-cadastro-erro.active {
+    visibility:visible;
 }
 
 /*Botão*/
@@ -112,4 +163,23 @@ body {
     transform: scale(1.05);
     background-color: black;
 
+}
+
+/* Responsividade do script de cadastro */
+@media screen and (min-width: 1104px) and (max-width: 1323px) {
+    .permissao-cadastro-erro, .permissao-cadastro-sucesso {
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1103px) {
+    .permissao-cadastro-erro, .permissao-cadastro-sucesso {
+        width: 42%;
+    }
+}
+
+@media screen and (max-width: 799px) {
+    .permissao-cadastro-erro, .permissao-cadastro-sucesso {
+        width: 100%;
+    }
 }
