@@ -75,8 +75,7 @@ body {
     border-radius: 4px;
 }
 .formCadastro i {
-    margin-left: 20vh;
-    margin-right: 20vh;
+    margin: auto;
 }
 .formLogin h1, .formCadastro h1, .formRedsenha h1 {
     padding: 0;
@@ -90,7 +89,7 @@ body {
     color: #666;
     margin-bottom: 25px;
 }
-.formLogin input, .formCadastro input .formRedsenha input {
+.formLogin input, .formCadastro input, .formRedsenha input {
     padding: 15px;
     font-size: 14px;
     border: 1px solid #ccc;
@@ -100,7 +99,7 @@ body {
     transition: all linear 160ms;
     outline: none;
 }
-.formLogin input:focus, .formCadastro input:focus .formRedsenha input:focus {
+.formLogin input:focus, .formCadastro input:focus, .formRedsenha input:focus {
     border: 1px solid blue;
 }
 
