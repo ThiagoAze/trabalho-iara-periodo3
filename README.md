@@ -146,7 +146,3 @@ Este projeto visa o desenvolvimento de uma interface responsiva e estático (alg
 ### 5. Revisão e Refinamento
 - Revisar o design e usabilidade.
 - Refinar com base em feedbacks.
-
-## Links Úteis
-
--
